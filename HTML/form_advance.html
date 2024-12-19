@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head> 
+       <title> Form_advance</title> 
+    </head>
+    <body>
+        <form>
+            <div>
+            <input name="name" type="text" placeholder="Name">
+            <input name="password" type="password" placeholder="Password">
+            <ul>
+                <li> 'div' is used to divide the form into sections</li>
+            </ul>
+            </div>
+
+            <div>
+            Favourite colour?
+            <input name="colour" type="radio" value="Red"> Red
+            <input name="colour" type="radio" value="Blue"> Blue
+            <input name="colour" type="radio" value="Green"> Green
+            <input name="colour" type="radio" value="Other"> Other
+            <ul>
+                <li> Red,blue,etc at the end are mentioned to show the option in written format in radio type.</li>
+            </ul>
+            </div>
+
+            <div>
+                <input name="Country" list="countries" placeholder="Country">
+                <datalist id="countries">
+                    <option> India </option>
+                    <option> USA   </option>
+                </datalist>
+            </div>
+        </form>
+    </body>
+</html>
