@@ -40,3 +40,41 @@ b1.debit(25)
 b1.print_balance()
 
 
+#Q3 Define a Employee class with attriubutes role, dept, salary. class shoudl contain a show details method as well
+# create an engineer class that inherits properties from employee abd has additional att. name and age
+
+class Employee:
+    def __init__(self, role, dept, salary):
+        self.role = role
+        self.dept = dept
+        self.salary = salary
+
+    def showDetails(self):
+        print("The employee is recruited as",self.role, "in", self.dept, "with a package of", self.salary, "lpa")
+
+e1 = Employee("intern", "CRd", 500000)
+e1.showDetails()
+
+class Engineer(Employee):
+    def __init__(self, name , age):
+        super().__init__("Engineer", "IT", "75,000")
+        self.name = name
+        self.age = age
+
+
+# Create a class called order which stores items and its prices, 
+#use dunder function __gt__ to convey that 
+#order1 > order2 if price of order1 > price of order 2
+
+class Order:
+    def __init__(self, item, price):
+        self.item = item
+        self.price = price
+
+    def __gt__(self, other):
+        return self.price > other.price
+    
+o1 = Order("bread",80)
+o2 = Order("Rusk", 60)
+
+print(o1.__gt__(o2))
